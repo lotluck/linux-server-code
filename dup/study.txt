@@ -1,0 +1,1 @@
+创建文件描述符的有pipe dup，但是dup创建的文件描述符并不是继承原来描述的属性比如close-on-exex 和 non-blocking

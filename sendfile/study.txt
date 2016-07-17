@@ -1,0 +1,8 @@
+stat系统调用包含fstat，lstat，stat，它们都是用来返回相关文件状态信息，三个有点区别，fstat需要open获取，而另外两个绝对路径，lstat可以处理链接文件。就这么点
+int fstat(int filedes, struct stat *buf);
+
+int stat(const char *path, struct stat *buf);
+
+int lstat(const char *path, struct stat *buf);
+
+sendfile函数在两个文件描述符之间直接传递数据（完全在内核操作），从而避免了内核和缓冲区之间数据拷贝，效率很高，这成为零拷贝
